@@ -1,0 +1,23 @@
+digraph ejemplo {
+
+node [shape=square label= "a", color = "green", fontcolor=blue , style= bold]
+edge [dir=forward, label= "0", color = blue, fontcolor=red , style= dashed]
+
+a [label="A"];
+b [label="B"];
+c [label="C"];
+d [label="D"];
+e [label="E"];
+f [label="F"];
+g [label="G"];
+
+
+
+a->b [label="6"];
+a->c [label="100"];
+b->d [label="80"];
+d->e [label="14"];
+c->f [label="20"];
+c->g [label="22"];
+
+}
