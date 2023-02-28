@@ -62,12 +62,14 @@ class TraductorTokens {
   private static final int [] ZZ_CMAP_BLOCKS = zzUnpackcmap_blocks();
 
   private static final String ZZ_CMAP_BLOCKS_PACKED_0 =
-    "\12\0\4\1\24\0\1\2\11\0\1\3\3\0\12\4"+
-    "\3\0\1\5\3\0\32\6\1\7\5\0\1\10\1\11"+
-    "\1\12\1\13\1\14\1\15\1\16\1\17\1\20\1\21"+
-    "\1\6\1\22\1\6\1\23\1\24\1\25\1\26\1\27"+
-    "\1\30\1\31\1\32\1\6\1\33\1\6\1\34\1\6"+
-    "\1\35\11\0\1\1\u01a2\0\2\1\326\0\u0100\1";
+    "\11\0\1\1\1\2\1\3\2\2\22\0\1\1\1\0"+
+    "\1\4\11\0\1\5\3\0\12\6\1\0\1\7\1\0"+
+    "\1\10\3\0\32\11\1\12\1\0\1\13\3\0\1\14"+
+    "\1\15\1\16\1\17\1\20\1\21\1\22\1\23\1\24"+
+    "\1\25\1\11\1\26\1\11\1\27\1\30\1\31\1\32"+
+    "\1\33\1\34\1\35\1\36\1\11\1\37\1\11\1\40"+
+    "\1\11\1\41\1\0\1\42\7\0\1\3\u01a2\0\2\3"+
+    "\326\0\u0100\3";
 
   private static int [] zzUnpackcmap_blocks() {
     int [] result = new int[1024];
@@ -94,14 +96,15 @@ class TraductorTokens {
   private static final int [] ZZ_ACTION = zzUnpackAction();
 
   private static final String ZZ_ACTION_PACKED_0 =
-    "\1\0\1\1\1\2\1\1\1\3\1\4\1\5\12\1"+
-    "\1\6\1\7\27\0\1\10\12\0\1\11\1\12\3\0"+
-    "\1\13\4\0\1\14\3\0\1\15\1\0\1\16\3\0"+
-    "\1\17\1\20\1\21\1\0\1\22\1\23\1\24\2\0"+
-    "\1\25\1\0\1\26\1\0\1\27";
+    "\3\0\1\1\1\2\1\1\1\3\1\4\1\5\1\1"+
+    "\1\6\1\7\12\1\1\10\1\11\3\0\1\12\31\0"+
+    "\1\13\14\0\1\14\1\15\3\0\1\16\4\0\1\17"+
+    "\5\0\1\20\1\0\1\21\3\0\1\22\1\23\1\24"+
+    "\1\0\1\25\2\0\1\26\1\27\2\0\1\30\1\0"+
+    "\1\31\1\0\1\32\1\0\1\33";
 
   private static int [] zzUnpackAction() {
-    int [] result = new int[87];
+    int [] result = new int[106];
     int offset = 0;
     offset = zzUnpackAction(ZZ_ACTION_PACKED_0, offset, result);
     return result;
@@ -126,20 +129,23 @@ class TraductorTokens {
   private static final int [] ZZ_ROWMAP = zzUnpackRowMap();
 
   private static final String ZZ_ROWMAP_PACKED_0 =
-    "\0\0\0\36\0\36\0\74\0\36\0\36\0\36\0\132"+
-    "\0\170\0\226\0\264\0\322\0\360\0\u010e\0\u012c\0\u014a"+
-    "\0\u0168\0\36\0\36\0\u0186\0\u01a4\0\u01c2\0\u01e0\0\u01fe"+
-    "\0\u021c\0\u023a\0\u0258\0\u0276\0\u0294\0\u02b2\0\u02d0\0\u02ee"+
-    "\0\u030c\0\u032a\0\u0348\0\74\0\u0366\0\u0384\0\u03a2\0\u03c0"+
-    "\0\u03de\0\u03fc\0\36\0\u041a\0\u0438\0\u0456\0\u0474\0\u0492"+
-    "\0\u04b0\0\u04ce\0\u04ec\0\u050a\0\u0528\0\36\0\36\0\u0546"+
-    "\0\u0564\0\u0582\0\36\0\u05a0\0\u05be\0\u05dc\0\u05fa\0\36"+
-    "\0\u0618\0\u0636\0\u0654\0\36\0\u0672\0\36\0\u0690\0\u06ae"+
-    "\0\u06cc\0\36\0\36\0\36\0\u06ea\0\36\0\36\0\36"+
-    "\0\u0708\0\u0726\0\36\0\u0744\0\36\0\u0762\0\36";
+    "\0\0\0\43\0\106\0\151\0\151\0\214\0\151\0\151"+
+    "\0\151\0\257\0\151\0\151\0\322\0\365\0\u0118\0\u013b"+
+    "\0\u015e\0\u0181\0\u01a4\0\u01c7\0\u01ea\0\u020d\0\151\0\151"+
+    "\0\u0230\0\u0253\0\214\0\151\0\u0276\0\257\0\u0299\0\u02bc"+
+    "\0\u02df\0\u0302\0\u0325\0\u0348\0\u036b\0\u038e\0\u03b1\0\u03d4"+
+    "\0\u03f7\0\u041a\0\u043d\0\u0460\0\u0483\0\u04a6\0\u04c9\0\u04ec"+
+    "\0\u050f\0\u0532\0\u0555\0\u0578\0\u059b\0\257\0\u05be\0\u05e1"+
+    "\0\u0604\0\u0627\0\u064a\0\u066d\0\u0690\0\u06b3\0\u06d6\0\u06f9"+
+    "\0\u071c\0\u073f\0\257\0\257\0\u0762\0\u0785\0\u07a8\0\257"+
+    "\0\u07cb\0\u07ee\0\u0811\0\u0834\0\257\0\u0857\0\u087a\0\u089d"+
+    "\0\u08c0\0\u08e3\0\257\0\u0906\0\257\0\u0929\0\u094c\0\u096f"+
+    "\0\257\0\257\0\257\0\u0992\0\257\0\u09b5\0\u09d8\0\257"+
+    "\0\257\0\u09fb\0\u0a1e\0\257\0\u09b5\0\151\0\u0a41\0\257"+
+    "\0\u0a64\0\257";
 
   private static int [] zzUnpackRowMap() {
-    int [] result = new int[87];
+    int [] result = new int[106];
     int offset = 0;
     offset = zzUnpackRowMap(ZZ_ROWMAP_PACKED_0, offset, result);
     return result;
@@ -162,30 +168,95 @@ class TraductorTokens {
   private static final int [] ZZ_TRANS = zzUnpackTrans();
 
   private static final String ZZ_TRANS_PACKED_0 =
-    "\1\2\1\3\1\4\1\5\1\2\1\6\1\2\1\7"+
-    "\1\10\1\11\1\12\1\13\1\14\1\15\1\2\1\16"+
-    "\2\2\1\17\1\20\4\2\1\21\4\2\1\22\40\0"+
-    "\1\23\3\0\1\24\1\0\25\24\30\0\1\25\30\0"+
-    "\1\26\1\0\1\27\31\0\1\30\3\0\1\31\21\0"+
-    "\1\32\7\0\1\33\30\0\1\34\46\0\1\35\31\0"+
-    "\1\36\25\0\1\37\51\0\1\40\30\0\1\41\6\0"+
-    "\1\42\2\0\1\43\10\0\1\44\1\0\1\24\1\0"+
-    "\25\24\12\0\1\45\56\0\1\46\25\0\1\47\42\0"+
-    "\1\50\30\0\1\51\43\0\1\52\34\0\1\53\24\0"+
-    "\1\54\42\0\1\55\3\0\1\56\27\0\1\57\25\0"+
-    "\1\60\37\0\1\61\32\0\1\62\57\0\1\63\37\0"+
-    "\1\64\25\0\1\65\25\0\1\66\34\0\1\67\34\0"+
-    "\1\70\47\0\1\71\30\0\1\72\32\0\1\73\52\0"+
-    "\1\74\37\0\1\75\26\0\1\76\25\0\1\77\35\0"+
-    "\1\100\46\0\1\101\20\0\1\102\47\0\1\103\35\0"+
-    "\1\104\35\0\1\105\42\0\1\106\22\0\1\107\33\0"+
-    "\1\110\33\0\1\111\55\0\1\112\27\0\1\113\27\0"+
-    "\1\114\50\0\1\115\22\0\1\116\35\0\1\117\34\0"+
-    "\1\120\46\0\1\121\40\0\1\122\22\0\1\123\43\0"+
-    "\1\124\26\0\1\125\46\0\1\126\40\0\1\127\6\0";
+    "\2\4\2\5\1\6\1\7\1\4\1\10\1\11\1\12"+
+    "\1\13\1\14\1\15\1\16\1\17\1\20\1\21\1\22"+
+    "\1\12\1\23\2\12\1\24\1\25\4\12\1\26\4\12"+
+    "\1\27\1\30\11\0\1\31\2\0\25\31\36\0\1\32"+
+    "\52\0\2\33\1\0\1\34\1\0\1\33\2\0\1\33"+
+    "\2\0\25\33\3\0\2\35\3\0\1\36\2\0\1\36"+
+    "\2\0\25\36\3\0\2\35\3\0\1\36\2\0\1\36"+
+    "\2\0\17\36\1\37\5\36\3\0\2\35\3\0\1\36"+
+    "\2\0\1\36\2\0\12\36\1\40\1\36\1\41\10\36"+
+    "\3\0\2\35\3\0\1\36\2\0\1\36\2\0\10\36"+
+    "\1\42\3\36\1\43\10\36\3\0\2\35\3\0\1\36"+
+    "\2\0\1\36\2\0\1\44\7\36\1\45\14\36\3\0"+
+    "\2\35\3\0\1\36\2\0\1\36\2\0\3\36\1\46"+
+    "\21\36\3\0\2\35\3\0\1\36\2\0\1\36\2\0"+
+    "\14\36\1\47\10\36\3\0\2\35\3\0\1\36\2\0"+
+    "\1\36\2\0\10\36\1\50\14\36\3\0\2\35\3\0"+
+    "\1\36\2\0\1\36\2\0\1\51\24\36\3\0\2\35"+
+    "\3\0\1\36\2\0\1\36\2\0\14\36\1\52\10\36"+
+    "\3\0\2\35\3\0\1\36\2\0\1\36\2\0\7\36"+
+    "\1\53\6\36\1\54\2\36\1\55\3\36\10\0\1\31"+
+    "\2\0\1\31\2\0\25\31\32\0\1\56\13\0\2\35"+
+    "\20\0\1\57\20\0\2\35\3\0\1\36\2\0\1\36"+
+    "\2\0\1\36\1\60\23\36\3\0\2\35\3\0\1\36"+
+    "\2\0\1\36\2\0\22\36\1\61\2\36\3\0\2\35"+
+    "\3\0\1\36\2\0\1\36\2\0\12\36\1\62\12\36"+
+    "\3\0\2\35\3\0\1\36\2\0\1\36\2\0\17\36"+
+    "\1\63\5\36\3\0\2\35\3\0\1\36\2\0\1\36"+
+    "\2\0\12\36\1\64\12\36\3\0\2\35\3\0\1\36"+
+    "\2\0\1\36\2\0\20\36\1\65\4\36\3\0\2\35"+
+    "\3\0\1\36\2\0\1\36\2\0\17\36\1\66\5\36"+
+    "\3\0\2\35\3\0\1\36\2\0\1\36\2\0\6\36"+
+    "\1\67\16\36\3\0\2\35\3\0\1\36\2\0\1\36"+
+    "\2\0\13\36\1\70\3\36\1\71\5\36\3\0\2\35"+
+    "\3\0\1\36\2\0\1\36\2\0\11\36\1\72\13\36"+
+    "\3\0\2\35\3\0\1\36\2\0\1\36\2\0\1\36"+
+    "\1\73\23\36\3\0\2\35\3\0\1\36\2\0\1\36"+
+    "\2\0\3\36\1\74\21\36\3\0\2\35\3\0\1\36"+
+    "\2\0\1\36\2\0\1\75\24\36\3\0\2\35\3\0"+
+    "\1\36\2\0\1\36\2\0\22\36\1\76\2\36\3\0"+
+    "\2\35\3\0\1\36\2\0\1\36\2\0\24\36\1\77"+
+    "\27\0\1\100\41\0\1\101\17\0\2\35\3\0\1\36"+
+    "\2\0\1\36\2\0\14\36\1\102\10\36\3\0\2\35"+
+    "\3\0\1\36\2\0\1\36\2\0\4\36\1\103\20\36"+
+    "\3\0\2\35\3\0\1\36\2\0\1\36\2\0\3\36"+
+    "\1\104\21\36\3\0\2\35\3\0\1\36\2\0\1\36"+
+    "\2\0\2\36\1\105\22\36\3\0\2\35\3\0\1\36"+
+    "\2\0\1\36\2\0\14\36\1\106\10\36\3\0\2\35"+
+    "\3\0\1\36\2\0\1\36\2\0\7\36\1\107\15\36"+
+    "\3\0\2\35\3\0\1\36\2\0\1\36\2\0\4\36"+
+    "\1\110\20\36\3\0\2\35\3\0\1\36\2\0\1\36"+
+    "\2\0\21\36\1\111\3\36\3\0\2\35\3\0\1\36"+
+    "\2\0\1\36\2\0\23\36\1\112\1\36\3\0\2\35"+
+    "\3\0\1\36\2\0\1\36\2\0\14\36\1\113\10\36"+
+    "\3\0\2\35\3\0\1\36\2\0\1\36\2\0\4\36"+
+    "\1\114\20\36\3\0\2\35\3\0\1\36\2\0\1\36"+
+    "\2\0\4\36\1\115\20\36\3\0\2\35\3\0\1\36"+
+    "\2\0\1\36\2\0\15\36\1\116\7\36\3\0\2\35"+
+    "\3\0\1\36\2\0\1\36\2\0\1\117\24\36\3\0"+
+    "\2\35\3\0\1\36\2\0\1\36\2\0\12\36\1\120"+
+    "\12\36\26\0\1\121\43\0\1\122\16\0\2\35\3\0"+
+    "\1\36\2\0\1\36\2\0\12\36\1\123\12\36\3\0"+
+    "\2\35\3\0\1\36\2\0\1\36\2\0\12\36\1\124"+
+    "\12\36\3\0\2\35\3\0\1\36\2\0\1\36\2\0"+
+    "\17\36\1\125\5\36\3\0\2\35\3\0\1\36\2\0"+
+    "\1\36\2\0\4\36\1\126\20\36\3\0\2\35\3\0"+
+    "\1\36\2\0\1\36\2\0\2\36\1\127\22\36\3\0"+
+    "\2\35\3\0\1\36\2\0\1\36\2\0\1\130\24\36"+
+    "\3\0\2\35\3\0\1\36\2\0\1\36\2\0\20\36"+
+    "\1\131\4\36\3\0\2\35\3\0\1\36\2\0\1\36"+
+    "\2\0\12\36\1\132\12\36\3\0\2\35\3\0\1\36"+
+    "\2\0\1\36\2\0\4\36\1\133\20\36\3\0\2\35"+
+    "\3\0\1\36\2\0\1\36\2\0\17\36\1\134\5\36"+
+    "\3\0\2\35\3\0\1\36\2\0\1\36\2\0\4\36"+
+    "\1\135\20\36\25\0\1\136\47\0\1\137\13\0\2\35"+
+    "\3\0\1\36\2\0\1\36\2\0\4\36\1\140\20\36"+
+    "\3\0\2\35\3\0\1\36\2\0\1\36\2\0\3\36"+
+    "\1\141\21\36\3\0\2\35\3\0\1\36\2\0\1\36"+
+    "\2\0\14\36\1\142\10\36\3\0\2\35\3\0\1\36"+
+    "\2\0\1\36\2\0\17\36\1\143\5\36\3\0\2\35"+
+    "\3\0\1\36\2\0\1\36\2\0\4\36\1\144\20\36"+
+    "\3\0\2\145\74\0\1\146\7\0\2\35\3\0\1\36"+
+    "\2\0\1\36\2\0\12\36\1\147\12\36\3\0\2\35"+
+    "\3\0\1\36\2\0\1\36\2\0\3\36\1\150\21\36"+
+    "\3\0\2\35\3\0\1\36\2\0\1\36\2\0\14\36"+
+    "\1\151\10\36\3\0\2\35\3\0\1\36\2\0\1\36"+
+    "\2\0\17\36\1\152\5\36\2\0";
 
   private static int [] zzUnpackTrans() {
-    int [] result = new int[1920];
+    int [] result = new int[2695];
     int offset = 0;
     offset = zzUnpackTrans(ZZ_TRANS_PACKED_0, offset, result);
     return result;
@@ -228,13 +299,14 @@ class TraductorTokens {
   private static final int [] ZZ_ATTRIBUTE = zzUnpackAttribute();
 
   private static final String ZZ_ATTRIBUTE_PACKED_0 =
-    "\1\0\2\11\1\1\3\11\12\1\2\11\27\0\1\11"+
-    "\12\0\2\11\3\0\1\11\4\0\1\11\3\0\1\11"+
-    "\1\0\1\11\3\0\3\11\1\0\3\11\2\0\1\11"+
-    "\1\0\1\11\1\0\1\11";
+    "\3\0\2\11\1\1\3\11\1\1\2\11\12\1\2\11"+
+    "\1\1\2\0\1\11\31\0\1\1\14\0\2\1\3\0"+
+    "\1\1\4\0\1\1\5\0\1\1\1\0\1\1\3\0"+
+    "\3\1\1\0\1\1\2\0\2\1\2\0\2\1\1\11"+
+    "\1\0\1\1\1\0\1\1";
 
   private static int [] zzUnpackAttribute() {
-    int [] result = new int[87];
+    int [] result = new int[106];
     int offset = 0;
     offset = zzUnpackAttribute(ZZ_ATTRIBUTE_PACKED_0, offset, result);
     return result;
@@ -292,6 +364,9 @@ class TraductorTokens {
    * {@link #zzBuffer} position, this will have a value of 1; otherwise, it will have a value of 0.
    */
   private int zzFinalHighSurrogate = 0;
+
+  /** For the backwards DFA of general lookahead statements */
+  private boolean [] zzFin = new boolean [ZZ_BUFFERSIZE+1];
 
   /** Number of newlines encountered up to the start of the matched text. */
   @SuppressWarnings("unused")
@@ -653,117 +728,166 @@ class TraductorTokens {
             { 
             }
             // fall through
-          case 24: break;
+          case 28: break;
           case 2:
             { System.out.print(yytext());
             }
             // fall through
-          case 25: break;
+          case 29: break;
           case 3:
             { System.out.println("COMA = " + yytext());
             }
             // fall through
-          case 26: break;
-          case 4:
-            { System.out.println("IGUAL = " + yytext());
-            }
-            // fall through
-          case 27: break;
-          case 5:
-            { System.out.println("CORCHETE_A = " + yytext());
-            }
-            // fall through
-          case 28: break;
-          case 6:
-            { System.out.println("LLAVE_A = " + yytext());
-            }
-            // fall through
-          case 29: break;
-          case 7:
-            { System.out.println("ET_VALOR = " + yytext());
-            }
-            // fall through
           case 30: break;
-          case 8:
-            { System.out.println("DIRECCION = " + yytext());
+          case 4:
+            { System.out.println("PUNTO_Y_COMA = " + yytext());
             }
             // fall through
           case 31: break;
-          case 9:
-            { System.out.println("COLOR_AZUL = " + yytext());
+          case 5:
+            { System.out.println("IGUAL = " + yytext());
             }
             // fall through
           case 32: break;
-          case 10:
-            { System.out.println("FUENTE_BOLD = " + yytext());
+          case 6:
+            { System.out.println("CORCHETE_A = " + yytext());
             }
             // fall through
           case 33: break;
-          case 11:
-            { System.out.println("ARISTA = " + yytext());
+          case 7:
+            { System.out.println("CORCHETE_C = " + yytext());
             }
             // fall through
           case 34: break;
-          case 12:
-            { System.out.println("NODO = " + yytext());
+          case 8:
+            { System.out.println("LLAVE_A = " + yytext());
             }
             // fall through
           case 35: break;
-          case 13:
-            { System.out.println("ARBOL = " + yytext());
+          case 9:
+            { System.out.println("LLAVE_C = " + yytext());
             }
             // fall through
           case 36: break;
-          case 14:
-            { System.out.println("COLOR = " + yytext());
+          case 10:
+            { System.out.println("ET_VALOR = " + yytext());
             }
             // fall through
           case 37: break;
-          case 15:
-            { System.out.println("HIJOS = " + yytext());
+          case 11:
+            { System.out.println("DIRECCION = " + yytext());
             }
             // fall through
           case 38: break;
-          case 16:
-            { System.out.println("ETIQUETA = " + yytext());
+          case 12:
+            { System.out.println("COLOR_AZUL = " + yytext());
             }
             // fall through
           case 39: break;
-          case 17:
-            { System.out.println("SH = " + yytext());
+          case 13:
+            { System.out.println("FUENTE_BOLD = " + yytext());
             }
             // fall through
           case 40: break;
-          case 18:
-            { System.out.println("FUENTE = " + yytext());
+          case 14:
+            { System.out.println("ARISTA = " + yytext());
             }
             // fall through
           case 41: break;
-          case 19:
-            { System.out.println("SH_CIRCULO = " + yytext());
+          case 15:
+            { System.out.println("NODO = " + yytext());
             }
             // fall through
           case 42: break;
-          case 20:
-            { System.out.println("FUENTE_DASHED = " + yytext());
+          case 16:
+            { System.out.println("ARBOL = " + yytext());
             }
             // fall through
           case 43: break;
-          case 21:
-            { System.out.println("SH_CUADRADO = " + yytext());
+          case 17:
+            { System.out.println("COLOR = " + yytext());
             }
             // fall through
           case 44: break;
-          case 22:
-            { System.out.println("DIR_ADELANTE = " + yytext());
+          case 18:
+            { System.out.println("HIJOS = " + yytext());
             }
             // fall through
           case 45: break;
-          case 23:
-            { System.out.println("COLOR_FUENTE = " + yytext());
+          case 19:
+            { System.out.println("ETIQUETA = " + yytext());
             }
             // fall through
           case 46: break;
+          case 20:
+            { System.out.println("SH = " + yytext());
+            }
+            // fall through
+          case 47: break;
+          case 21:
+            { System.out.println("FUENTE = " + yytext());
+            }
+            // fall through
+          case 48: break;
+          case 22:
+            { System.out.println("SH_CIRCULO = " + yytext());
+            }
+            // fall through
+          case 49: break;
+          case 23:
+            { System.out.println("FUENTE_DASHED = " + yytext());
+            }
+            // fall through
+          case 50: break;
+          case 24:
+            { System.out.println("SH_CUADRADO = " + yytext());
+            }
+            // fall through
+          case 51: break;
+          case 25:
+            // general lookahead, find correct zzMarkedPos
+            { int zzFState = 1;
+              int zzFPos = zzStartRead;
+              if (zzFin.length <= zzBufferL.length) {
+                zzFin = new boolean[zzBufferL.length+1];
+              }
+              boolean zzFinL[] = zzFin;
+              while (zzFState != -1 && zzFPos < zzMarkedPos) {
+                zzFinL[zzFPos] = ((zzAttrL[zzFState] & 1) == 1);
+                zzInput = Character.codePointAt(zzBufferL, zzFPos, zzMarkedPos);
+                zzFPos += Character.charCount(zzInput);
+                zzFState = zzTransL[ zzRowMapL[zzFState] + zzCMap(zzInput) ];
+              }
+              if (zzFState != -1) {
+                zzFinL[zzFPos++] = ((zzAttrL[zzFState] & 1) == 1);
+              }
+              while (zzFPos <= zzMarkedPos) {
+                zzFinL[zzFPos++] = false;
+              }
+
+              zzFState = 2;
+              zzFPos = zzMarkedPos;
+              while (!zzFinL[zzFPos] || (zzAttrL[zzFState] & 1) != 1) {
+                zzInput = Character.codePointBefore(zzBufferL, zzFPos, zzStartRead);
+                zzFPos -= Character.charCount(zzInput);
+                zzFState = zzTransL[ zzRowMapL[zzFState] + zzCMap(zzInput) ];
+              };
+              zzMarkedPos = zzFPos;
+            }
+            { System.out.println("ID_HIJO = " + yytext());
+            }
+            // fall through
+          case 52: break;
+          case 26:
+            { System.out.println("DIR_ADELANTE = " + yytext());
+            }
+            // fall through
+          case 53: break;
+          case 27:
+            { System.out.println("COLOR_FUENTE = " + yytext());
+            }
+            // fall through
+          case 54: break;
           default:
             zzScanError(ZZ_NO_MATCH);
         }
