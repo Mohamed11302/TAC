@@ -53,7 +53,7 @@ both {System.out.println("DIR_BOTH => " + yytext());}
 ; {System.out.println("PUNTO_COMA => " + yytext());}
 
 //COMENTARIOS
-"//"+([a-zA-Z]*+(" "| \t | \f | \n | \r )*+[0-9]*+(á | é | í | ó | ú)*+( _ | \! | ¡ | ¿ | \?  )*)*+\n {System.out.println("COMENTARIO// => " + yytext());}
+"//"+([a-zA-Z]*+(" "| \t | \f | \r )*+[0-9]*+(á | é | í | ó | ú)*+( _ | \! | ¡ | ¿ | \?  )*)*+\n {System.out.println("COMENTARIO// => " + yytext());}
 "/*"+([a-zA-Z]*+(" "| \t | \f | \n | \r )*+[0-9]*+(á | é | í | ó | ú)*+( _ | \! | ¡ | ¿ | \?  )*)*+"*/"  {System.out.println("COMENTARIO/* => " + yytext());}
 
 //IDENTIFICADORES
