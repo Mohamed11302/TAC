@@ -48,7 +48,6 @@ both {System.out.println("DIR_BOTH => " + yytext());}
 ; {System.out.println("PUNTO_COMA => " + yytext());}
 
 //COMENTARIOS
-<<<<<<< HEAD
 "//"+.+\n {System.out.println("COMENTARIO// => " + yytext());}
 "/*"+ ([^("/*"|"*/")])* +"*/" {System.out.println("COMENTARIO/* => " + yytext());}
 
@@ -59,17 +58,6 @@ both {System.out.println("DIR_BOTH => " + yytext());}
 //LABELS
 \"([^(\n | \")]*)\" {System.out.println("ETIQUETA_VALOR => " + yytext());}
 [^(" "| \t | \f | \n | \r |\{ |\[ |\} |\] |= |, |;)]* {System.out.println("ETIQUETA_VALOR2 => " + yytext());}
-=======
-"//"+([a-zA-Z]*+(" "| \t | \f | \n | \r )*+[0-9]*+(á | é | í | ó | ú)*+( _ | \! | ¡ | ¿ | \?  )*)*+\n {System.out.println("COMENTARIO// => " + yytext());}
-"/*"+([a-zA-Z]*+(" "| \t | \f | \n | \r )*+[0-9]*+(á | é | í | ó | ú)*+( _ | \! | ¡ | ¿ | \?  )*)*+"*/"  {System.out.println("COMENTARIO/* => " + yytext());}
-
-//IDENTIFICADORES
-[a-zA-Z]([a-zA-Z]*+[0-9]*+(á | é | í | ó | ú)*+( _ | \! | ¡ | ¿ | \?  )*)* {System.out.println("IDENTIFICADOR => " + yytext());}
-
-//LABELS
- \"([a-zA-Z]*+(" "| \t | \f | \n | \r )*+[0-9]*+(á | é | í | ó | ú)*+( _ | \! | ¡ | ¿ | \?  )*)*\" {System.out.println("ETIQUETA_VALOR => " + yytext());}
-
->>>>>>> 727f08273cc058dee33f9b59b1f35ecf1fa72628
 
 
 . {}
