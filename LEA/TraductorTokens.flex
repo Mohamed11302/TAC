@@ -24,15 +24,10 @@ circle {System.out.println("SH_CIRCULO => " + yytext());}
 doublecircle {System.out.println("SH_DOBLECIRCULO => " + yytext());}
 rectangle {System.out.println("SH_RECTANGULO => " + yytext());}
 
-blue {System.out.println("CF_AZUL => " + yytext());}
-green {System.out.println("CF_VERDE => " + yytext());}
-red {System.out.println("CF_ROJO => " + yytext());}
-yellow {System.out.println("CF_AMARILLLO => " + yytext());}
-
-\"blue\" {System.out.println("C_AZUL => " + yytext());}
-\"green\" {System.out.println("C_VERDE => " + yytext());}
-\"red\" {System.out.println("C_ROJO => " + yytext());}
-\"yellow\" {System.out.println("C_AMARILLLO => " + yytext());}
+\"blue\" | blue {System.out.println("C_AZUL => " + yytext());}
+\"green\" | green {System.out.println("C_VERDE => " + yytext());}
+\"red\" | red {System.out.println("C_ROJO => " + yytext());}
+\"yellow\" | yellow {System.out.println("C_AMARILLLO => " + yytext());}
 
 bold {System.out.println("FT_BOLD => " + yytext());}
 dashed {System.out.println("FT_DASHED => " + yytext());}
@@ -53,15 +48,16 @@ both {System.out.println("DIR_BOTH => " + yytext());}
 ; {System.out.println("PUNTO_COMA => " + yytext());}
 
 //COMENTARIOS
-"//"+([a-zA-Z]*+(" "| \t | \f | \r )*+[0-9]*+(á | é | í | ó | ú)*+( _ | \! | ¡ | ¿ | \?  )*)*+\n {System.out.println("COMENTARIO// => " + yytext());}
-"/*"+([a-zA-Z]*+(" "| \t | \f | \n | \r )*+[0-9]*+(á | é | í | ó | ú)*+( _ | \! | ¡ | ¿ | \?  )*)*+"*/"  {System.out.println("COMENTARIO/* => " + yytext());}
+"//"+.+\n {System.out.println("COMENTARIO// => " + yytext());}
+"/*"+ ([^("/*"|"*/")])* +"*/" {System.out.println("COMENTARIO/* => " + yytext());}
+
 
 //IDENTIFICADORES
-([a-zA-Z]([a-zA-Z]*+[0-9]*+(á | é | í | ó | ú)*+( _ | \! | ¡ | ¿ | \?  )*)*) {System.out.println("IDENTIFICADOR => " + yytext());}
+[a-zA-Z]+[^(" "| \t | \f | \n | \r |\{ |\[ |\} |\] |= |, |;)]* {System.out.println("IDENTIFICADOR => " + yytext());}
 
 //LABELS
- \"(([a-zA-Z]*+(" "| \t | \f | \n | \r )*+[0-9]*+(á | é | í | ó | ú)*+( _ | \! | ¡ | ¿ | \?  )*)*)\" {System.out.println("ETIQUETA_VALOR => " + yytext());}
-
+\"([^(\n | \")]*)\" {System.out.println("ETIQUETA_VALOR => " + yytext());}
+[^(" "| \t | \f | \n | \r |\{ |\[ |\} |\] |= |, |;)]* {System.out.println("ETIQUETA_VALOR2 => " + yytext());}
 
 
 . {}
