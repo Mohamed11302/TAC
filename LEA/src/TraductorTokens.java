@@ -798,7 +798,7 @@ class TraductorTokens {
             // fall through
           case 45: break;
           case 4:
-            { System.out.println("PUNTO_Y_COMA => " + yytext());
+            { System.out.println("PUNTO_COMA => " + yytext());
             }
             // fall through
           case 46: break;
@@ -848,7 +848,7 @@ class TraductorTokens {
             // fall through
           case 55: break;
           case 14:
-            { System.out.println("FONTCOLOR_ROJO => " + yytext());
+            { System.out.println("CF_ROJO => " + yytext());
             }
             // fall through
           case 56: break;
@@ -863,12 +863,12 @@ class TraductorTokens {
             // fall through
           case 58: break;
           case 17:
-            { System.out.println("FONTCOLOR_AZUL => " + yytext());
+            { System.out.println("CF_AZUL => " + yytext());
             }
             // fall through
           case 59: break;
           case 18:
-            { System.out.println("FUENTE_BOLD => " + yytext());
+            { System.out.println("FT_BOLD => " + yytext());
             }
             // fall through
           case 60: break;
@@ -893,7 +893,7 @@ class TraductorTokens {
             // fall through
           case 64: break;
           case 23:
-            { System.out.println("COLOR_ROJO => " + yytext());
+            { System.out.println("C_ROJO => " + yytext());
             }
             // fall through
           case 65: break;
@@ -908,7 +908,7 @@ class TraductorTokens {
             // fall through
           case 67: break;
           case 26:
-            { System.out.println("FONTCOLOR_VERDE => " + yytext());
+            { System.out.println("CF_VERDE => " + yytext());
             }
             // fall through
           case 68: break;
@@ -928,7 +928,7 @@ class TraductorTokens {
             // fall through
           case 71: break;
           case 30:
-            { System.out.println("FUENTE_SOLID => " + yytext());
+            { System.out.println("FT_SOLID => " + yytext());
             }
             // fall through
           case 72: break;
@@ -938,7 +938,7 @@ class TraductorTokens {
             // fall through
           case 73: break;
           case 32:
-            { System.out.println("COLOR_AZUL => " + yytext());
+            { System.out.println("C_AZUL => " + yytext());
             }
             // fall through
           case 74: break;
@@ -948,7 +948,7 @@ class TraductorTokens {
             // fall through
           case 75: break;
           case 34:
-            { System.out.println("FUENTE_DASHED => " + yytext());
+            { System.out.println("FT_DASHED => " + yytext());
             }
             // fall through
           case 76: break;
@@ -958,12 +958,12 @@ class TraductorTokens {
             // fall through
           case 77: break;
           case 36:
-            { System.out.println("FONTCOLOR_AMARILLLO => " + yytext());
+            { System.out.println("CF_AMARILLLO => " + yytext());
             }
             // fall through
           case 78: break;
           case 37:
-            { System.out.println("COLOR_VERDE => " + yytext());
+            { System.out.println("C_VERDE => " + yytext());
             }
             // fall through
           case 79: break;
@@ -973,7 +973,7 @@ class TraductorTokens {
             // fall through
           case 80: break;
           case 39:
-            { System.out.println("COLOR_AMARILLLO => " + yytext());
+            { System.out.println("C_AMARILLLO => " + yytext());
             }
             // fall through
           case 81: break;
