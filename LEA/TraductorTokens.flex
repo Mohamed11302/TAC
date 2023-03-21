@@ -49,15 +49,14 @@ both {System.out.println("DIR_BOTH => " + yytext());}
 
 //COMENTARIOS
 "//"+.+\n {System.out.println("COMENTARIO// => " + yytext());}
-"/*"+ ([^("/*"|"*/")])* +"*/" {System.out.println("COMENTARIO/* => " + yytext());}
+"/*"+ ([^("*/")])* +"*/" {System.out.println("COMENTARIO/* => " + yytext());}
 
 
 //IDENTIFICADORES
 [a-zA-Z]+[^(" "| \t | \f | \n | \r |\{ |\[ |\} |\] |= |, |;)]* {System.out.println("IDENTIFICADOR => " + yytext());}
 
 //LABELS
-\"([^(\n | \")]*)\" {System.out.println("ETIQUETA_VALOR => " + yytext());}
-[^(" "| \t | \f | \n | \r |\{ |\[ |\} |\] |= |, |;)]* {System.out.println("ETIQUETA_VALOR2 => " + yytext());}
+\"([^(\")]*)\" | [^(" "| \t | \f | \n | \r |\{ |\[ |\} |\] |= |, |;)]*  {System.out.println("ETIQUETA_VALOR => " + yytext());}
 
 
 . {}
