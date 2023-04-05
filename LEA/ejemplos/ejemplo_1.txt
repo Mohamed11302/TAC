@@ -1,0 +1,22 @@
+// Este es un ejemplo con diferentes definciones de node y edge
+
+
+arbol ejemplo {
+
+node [shape = square,  label = "a", color = "green", fontcolor = blue, style = bold]
+
+edge [dir = forward, label = "0", color = "blue", fontcolor = red , style = dashed]
+
+// Este es un ejemplo con diferentes definciones de node y edge
+
+a hijos = {b [label = "6", color = "red"],c [label = "100"],d [label = "100"]}  [label = "A", color = "blue", shape = circle];
+b hijos = {d [label = "80"] } [label = "B"];
+c hijos = {f [color = blue], g [label = "22"]} [label = "C"];
+edge [color = "red", fontcolor = green]
+d hijos = {e [label = "14"], z [label="10"] };
+e ;
+f [shape = circle];
+g [color = red, label = 4];
+z hijos = {d,e} [label = "Z",color = yellow];
+
+}
