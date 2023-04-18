@@ -11,6 +11,13 @@ cd %1
 
 REM Ejecuta el comando de Graphviz
 dot resultado_analisis.dot -o resultado_analisis.png -Tpng
-start resultado_analisis.png
-echo "IMAGEN REALIZADA CON EXITO"
+if %errorlevel% equ 0 (
+  start resultado_analisis.png
+  echo "IMAGEN REALIZADA CON EXITO"
+) else (
+  del resultado_analisis.png
+  echo "ERROR AL CONVERTIR A DOT"
+  start resultado_analisis.dot
+)
+
 :EOF

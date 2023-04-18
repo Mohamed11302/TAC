@@ -21,24 +21,24 @@ dir {return new Symbol(sym.DIRECCION, yytext()); }
 hijos {return new Symbol(sym.HIJOS, yytext()); }
 
 
-square {return new Symbol(sym.SH_CUADRADO, yytext()); }
-circle  {return new Symbol(sym.SH_CIRCULO, yytext()); }
-doublecircle {return new Symbol(sym.SH_DOBLECIRCULO, yytext());}
-rectangle {return new Symbol(sym.SH_RECTANGULO, yytext());}
+\"square\" | square {return new Symbol(sym.SH_CUADRADO, yytext()); }
+\"circle\" | circle  {return new Symbol(sym.SH_CIRCULO, yytext()); }
+\"doublecircle\" | doublecircle {return new Symbol(sym.SH_DOBLECIRCULO, yytext());}
+\"rectangle\" | rectangle {return new Symbol(sym.SH_RECTANGULO, yytext());}
 
 \"blue\" | blue {return new Symbol(sym.C_AZUL, yytext());}
 \"green\" | green {return new Symbol(sym.C_VERDE, yytext());}
 \"red\" | red {return new Symbol(sym.C_ROJO, yytext());}
 \"yellow\" | yellow {return new Symbol(sym.C_AMARILLO, yytext());}
 
-bold {return new Symbol(sym.FT_BOLD, yytext());}
-dashed {return new Symbol(sym.FT_DASHED, yytext());}
-solid {return new Symbol(sym.FT_SOLID, yytext());}
+\"bold\" | bold {return new Symbol(sym.FT_BOLD, yytext());}
+\"dashed\" | dashed {return new Symbol(sym.FT_DASHED, yytext());}
+\"solid\" | solid {return new Symbol(sym.FT_SOLID, yytext());}
 
-none {return new Symbol(sym.DIR_NONE, yytext());}
-forward {return new Symbol(sym.DIR_FORWARD, yytext());}
-back {return new Symbol(sym.DIR_BACK, yytext());}
-both {return new Symbol(sym.DIR_BOTH, yytext());}
+\"none\" | none {return new Symbol(sym.DIR_NONE, yytext());}
+\"forward\" | forward {return new Symbol(sym.DIR_FORWARD, yytext());}
+\"back\" | back {return new Symbol(sym.DIR_BACK, yytext());}
+\"both\" | both {return new Symbol(sym.DIR_BOTH, yytext());}
 
 
 \{ {return new Symbol(sym.LLAVE_A, yytext());}
@@ -60,7 +60,8 @@ both {return new Symbol(sym.DIR_BOTH, yytext());}
 
 
 //LABELS
-\"([^(\")]*)\" | [^(" "| \t | \f | \n | \r |\{ |\[ |\} |\] |= |, |;)]* {return new Symbol(sym.ETIQUETA_VALOR, yytext());}
+\"([^(\")]*)\" 											   	{return new Symbol(sym.ETIQUETA_VALOR1, yytext());}
+[^(" "| \t | \f | \n | \r |\{ |\[ |\} |\] |= |, |;)]* 		{return new Symbol(sym.ETIQUETA_VALOR2, yytext());}
 
 [ \t\r\n\f] { /* ignora delimitadores */ }
 . { System.err.println("Caracter Ilegal: "+yytext()); }

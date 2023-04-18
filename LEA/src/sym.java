@@ -12,6 +12,8 @@ public class sym {
   public static final int SH = 4;
   public static final int SH_CUADRADO = 12;
   public static final int SH_RECTANGULO = 15;
+  public static final int ETIQUETA_VALOR2 = 37;
+  public static final int ETIQUETA_VALOR1 = 36;
   public static final int CORCHETE_C = 30;
   public static final int CORCHETE_A = 28;
   public static final int LLAVE_C = 29;
@@ -21,7 +23,6 @@ public class sym {
   public static final int C_AMARILLO = 19;
   public static final int IGUAL = 31;
   public static final int ARISTA = 9;
-  public static final int ETIQUETA_VALOR = 36;
   public static final int FT_DASHED = 21;
   public static final int DIR_FORWARD = 24;
   public static final int PUNTO_COMA = 33;
@@ -80,7 +81,8 @@ public class sym {
   "PUNTO_COMA",
   "COMENTARIO",
   "IDENTIFICADOR",
-  "ETIQUETA_VALOR"
+  "ETIQUETA_VALOR1",
+  "ETIQUETA_VALOR2"
   };
 }
 

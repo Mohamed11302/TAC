@@ -112,8 +112,8 @@ parser code {:
 			parser.parse();
 		}
 		catch ( Exception e) {
-			System.out.println("EXCEPCION. Analisis INCORRECTO !!");
-			System.exit(1);
+			System.out.println("EXCEPCION. ANALISIS INCORRECTO !!");
+			//System.exit(1);
 		}
 		
 	 }
@@ -126,7 +126,7 @@ terminal C_AZUL, C_VERDE, C_ROJO, C_AMARILLO;
 terminal FT_BOLD, FT_DASHED, FT_SOLID;
 terminal DIR_NONE, DIR_FORWARD, DIR_BACK, DIR_BOTH;
 terminal LLAVE_A, CORCHETE_A, LLAVE_C, CORCHETE_C, IGUAL, COMA, PUNTO_COMA;
-terminal COMENTARIO, IDENTIFICADOR, ETIQUETA_VALOR;
+terminal COMENTARIO, IDENTIFICADOR, ETIQUETA_VALOR1, ETIQUETA_VALOR2;
 
 /****************** DEFINICION DE LOS ATRIBUTOS DE LOS NO TERMINALES ******************/
 non terminal DefArbol, DefArbolAux;
@@ -134,6 +134,7 @@ non terminal DefAtributosNodo, DefAtributosNodoAux, DefAtributosNodoTerminacione
 non terminal DefAtributosArista, DefAtributosAristaAux, DefAtributosAristaTerminaciones;
 non terminal TiposFuente, TiposSH, TiposColor, TiposDireccion;
 non terminal DefComentarios;
+non terminal DefEtiquetas;
 
 non terminal NodoDelArbol DefDefinicionNodo;
 non terminal ArrayList<AristaDelArbol> DefHijosDelNodo;
@@ -144,7 +145,7 @@ start with DefArbol;
 
 /****************** DEFINICION DEL ARBOL ******************/
 DefArbol ::= DefComentarios:comentario ARBOL IDENTIFICADOR:id LLAVE_A:llave_a DefArbolAux:definicion_arbol  
-	{: String cadena = comentario.toString() + "digraph"+" "+ id.toString() + llave_a.toString() +"\n"+ definicion_arbol.toString() ;  
+	{: String cadena = comentario.toString() + "digraph"+" "+ id.toString() + llave_a.toString() +"\n"+ definicion_arbol.toString();  
 		File archivo = new File(System.getProperty("user.dir") + "\\resultado\\resultado_analisis.dot");
 		
 		
@@ -184,13 +185,13 @@ DefArbol ::= DefComentarios:comentario ARBOL IDENTIFICADOR:id LLAVE_A:llave_a De
 		if (NodoDefinido && NodoComoHijo){
 			FileWriter escritor = new FileWriter(archivo, false);
 			escritor.write(cadena);
-			System.out.println(cadena);
+			//System.out.println(cadena);
 			escritor.close();
-			System.out.println("Analisis Correcto ");
+			System.out.println("ANALISIS CORRECTO");
 			AbrirImagen();
 		}
 		else{
-			System.out.println("Analisis Incorrecto ");
+			System.out.println("ANALISIS INCORRECTO");
 			if (NodoDefinido == false) 
 			{
 				System.out.println("No todos los nodos estan definidos");
@@ -245,19 +246,21 @@ DefAtributosNodo ::= NODO:nodo CORCHETE_A:corchete_a DefAtributosNodoAux:atribut
 
 DefAtributosNodoAux ::= 
 			  SH:forma IGUAL:igual TiposSH:tipos_forma DefAtributosNodoTerminaciones :resto_atributos						{:  RESULT = forma.toString()+ igual.toString() + tipos_forma.toString() +resto_atributos.toString()  ;  :} 
-			| ETIQUETA:etiqueta IGUAL:igual ETIQUETA_VALOR:etiqueta_valor  DefAtributosNodoTerminaciones:resto_atributos	{:  RESULT = etiqueta.toString() + igual.toString() + etiqueta_valor.toString() +resto_atributos.toString()  ;  :} 
+			| ETIQUETA:etiqueta IGUAL:igual DefEtiquetas:etiqueta_valor  DefAtributosNodoTerminaciones:resto_atributos	{:  RESULT = etiqueta.toString() + igual.toString() + etiqueta_valor.toString() +resto_atributos.toString()  ;  :}
+			| ETIQUETA:etiqueta IGUAL:igual IDENTIFICADOR:etiqueta_valor  DefAtributosNodoTerminaciones:resto_atributos		{:  RESULT = etiqueta.toString() + igual.toString() + "\"" + etiqueta_valor.toString() + "\"" + resto_atributos.toString()  ;  :} 
 			| COLOR:color IGUAL:igual TiposColor:tipos_color DefAtributosNodoTerminaciones:resto_atributos					{:  RESULT = color.toString() + igual.toString() + tipos_color.toString() +resto_atributos.toString()  ;  :} 
 			| COLOR_FUENTE:color_fuente IGUAL:igual TiposColor:tipos_color DefAtributosNodoTerminaciones:resto_atributos	{:  RESULT = color_fuente.toString() + igual.toString() + tipos_color.toString() +resto_atributos.toString()  ;  :} 
 			| FUENTE:fuente IGUAL:igual TiposFuente:tipos_fuente DefAtributosNodoTerminaciones:resto_atributos				{:  RESULT = fuente.toString() + igual.toString() + tipos_fuente.toString() +resto_atributos.toString()  ;  :}; 
 DefAtributosNodoTerminaciones ::= 
-			  COMA:coma DefAtributosNodoAux:resto_atributos																{:  RESULT = coma.toString() + resto_atributos.toString(); :}  
-			| CORCHETE_C:corchete 																									{:  RESULT = corchete; :};
+			  COMA:coma DefAtributosNodoAux:resto_atributos																	{:  RESULT = coma.toString() + resto_atributos.toString(); :}  
+			| CORCHETE_C:corchete 																							{:  RESULT = corchete; :};
 
 /****************** DEFINICION DE LOS ATRIBUTOS DE LAS ARISTAS ******************/
 DefAtributosArista ::= ARISTA:arista CORCHETE_A:corchete_a DefAtributosAristaAux:atributos  									{:  RESULT = arista.toString() + corchete_a.toString() + atributos.toString();  :} ;
 DefAtributosAristaAux ::= 
 			  DIRECCION:dir IGUAL:igual TiposDireccion:tiposdir DefAtributosAristaTerminaciones:resto_atributos 		 		{:  RESULT = dir.toString() + igual.toString() + tiposdir.toString() +resto_atributos.toString()  ;  :} 
-			| ETIQUETA:etiqueta IGUAL:igual ETIQUETA_VALOR:etiqueta_valor  DefAtributosAristaTerminaciones:resto_atributos 		{:  RESULT = etiqueta.toString() + igual.toString() + etiqueta_valor.toString() +resto_atributos.toString()  ;  :} 
+			| ETIQUETA:etiqueta IGUAL:igual DefEtiquetas:etiqueta_valor  DefAtributosAristaTerminaciones:resto_atributos 		{:  RESULT = etiqueta.toString() + igual.toString() + etiqueta_valor.toString() +resto_atributos.toString()  ;  :}
+			| ETIQUETA:etiqueta IGUAL:igual IDENTIFICADOR:etiqueta_valor  DefAtributosNodoTerminaciones:resto_atributos			{:  RESULT = etiqueta.toString() + igual.toString() + "\"" + etiqueta_valor.toString() + "\"" +resto_atributos.toString()  ;  :}  
 			| COLOR:color IGUAL:igual TiposColor:tipos_color DefAtributosAristaTerminaciones:resto_atributos 					{:  RESULT = color.toString() + igual.toString() + tipos_color.toString() +resto_atributos.toString()  ;  :} 
 			| COLOR_FUENTE:color_fuente IGUAL:igual TiposColor:tipos_color DefAtributosAristaTerminaciones:resto_atributos 		{:  RESULT = color_fuente.toString() + igual.toString() + tipos_color.toString() +resto_atributos.toString()  ;  :} 
 			| FUENTE:fuente IGUAL:igual TiposFuente:tipos_fuente DefAtributosAristaTerminaciones:resto_atributos 				{:  RESULT = fuente.toString() + igual.toString() + tipos_fuente.toString() +resto_atributos.toString()  ;  :} ;
@@ -360,7 +363,10 @@ DefComentarios ::=
 			  COMENTARIO:comentario DefComentarios:restocomentario 							{: RESULT = comentario.toString() + restocomentario.toString() ; :} 
 			| 	/*COMENTARIO VACIO*/														{: RESULT = "\n" ; :} ;
 
-
+/****************** DEFINICION DE LAS ETIQUETAS *******************/
+DefEtiquetas ::=
+			  ETIQUETA_VALOR1: etiqueta														{:RESULT = etiqueta.toString(); :}
+		    | ETIQUETA_VALOR2: etiqueta														{:RESULT = '\"' + etiqueta.toString() + '\"'; :}; 
 
 
 
