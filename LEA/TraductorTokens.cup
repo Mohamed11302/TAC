@@ -246,7 +246,7 @@ DefAtributosNodo ::= NODO:nodo CORCHETE_A:corchete_a DefAtributosNodoAux:atribut
 
 DefAtributosNodoAux ::= 
 			  SH:forma IGUAL:igual TiposSH:tipos_forma DefAtributosNodoTerminaciones :resto_atributos						{:  RESULT = forma.toString()+ igual.toString() + tipos_forma.toString() +resto_atributos.toString()  ;  :} 
-			| ETIQUETA:etiqueta IGUAL:igual DefEtiquetas:etiqueta_valor  DefAtributosNodoTerminaciones:resto_atributos	{:  RESULT = etiqueta.toString() + igual.toString() + etiqueta_valor.toString() +resto_atributos.toString()  ;  :}
+			| ETIQUETA:etiqueta IGUAL:igual DefEtiquetas:etiqueta_valor  DefAtributosNodoTerminaciones:resto_atributos		{:  RESULT = etiqueta.toString() + igual.toString() + etiqueta_valor.toString() +resto_atributos.toString()  ;  :}
 			| ETIQUETA:etiqueta IGUAL:igual IDENTIFICADOR:etiqueta_valor  DefAtributosNodoTerminaciones:resto_atributos		{:  RESULT = etiqueta.toString() + igual.toString() + "\"" + etiqueta_valor.toString() + "\"" + resto_atributos.toString()  ;  :} 
 			| COLOR:color IGUAL:igual TiposColor:tipos_color DefAtributosNodoTerminaciones:resto_atributos					{:  RESULT = color.toString() + igual.toString() + tipos_color.toString() +resto_atributos.toString()  ;  :} 
 			| COLOR_FUENTE:color_fuente IGUAL:igual TiposColor:tipos_color DefAtributosNodoTerminaciones:resto_atributos	{:  RESULT = color_fuente.toString() + igual.toString() + tipos_color.toString() +resto_atributos.toString()  ;  :} 

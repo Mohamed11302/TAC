@@ -1,9 +1,9 @@
 arbol ejemplo {
-    node [shape = circle, label = "nodo", color = "blue", fontcolor = "green"]
-    edge [dir = forward, label = "0", color = "green", fontcolor = yellow, style = solid]
+    node [shape = circle, label = "nodo", color = "blue", fontcolor = "blue"]
+    edge [dir = forward, color = "red", fontcolor = yellow, style = solid]
     
-    a hijos = { b[label = "2"], c[label = "3"] } [label = 1.3];
-    b [label = "2", shape = doublecircle];
-    c hijos = { d[label = "5"] } [label = "3"];
-    d [label = "4", shape = doublecircle];
+    a hijos = { b, c, d } [label = "nodo 1"];
+    b hijos = {a, d} [label = "nodo 2"];
+    c hijos = {a, d} [label = "nodo 3"];
+    d hijos = {a, b, c} [label = "nodo 4"];
 }
